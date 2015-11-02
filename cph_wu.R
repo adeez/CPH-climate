@@ -43,6 +43,15 @@ levels(windHistory$factors) <- c("NNE-A","NNE-B","NNE-C","NNE-D","ENE-A","ENE-B"
                                  "SSW-A","SSW-B","SSW-C","SSW-D","WSW-A","WSW-B","WSW-C","WSW-D","WSW-E",
                                  "WNW-A","WNW-B","WNW-C","WNW-D","WNW-E","NNW-A","NNW-B","NNW-C","NNW-D","NNW-E",
                                  "NNE-E","ENE-E","ESE-E","SSW-E")
+windHistoryArranged$angles <- factor(windHistoryArranged$Interaction)
+levels(windHistoryArranged$angles) <- c("0","0","0","0","45","45","45","45","90","90","90","90","135","135","135",
+                                        "135","135","180","180","180","180","225","225","225","225","225","225",
+                                        "270","270","270","270","270","315","315","315","315","315","0","45",
+                                        "90","180")
+
+
+
+
 
 clouds <- factor(cut(cph_c2$CloudCover, breaks = 8))
 levels(clouds) <- seq_along(levels(clouds))
