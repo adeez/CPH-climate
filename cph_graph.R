@@ -128,8 +128,8 @@ ggplot(windHistoryArranged, aes(x=factors, fill=Speedcut))+geom_bar()+
   guides(fill = guide_legend("Wind Speed", title.position = "top"))+
   labs(x = NULL, y = NULL ) +
   
-  scale_x_discrete(labels= c("0","5","15","25","35","45","55","65","75","85")) +
-  #scale_y_discrete(breaks = c("200","400", "600"), labels = c("3%", "6%","9%"))+
+  scale_x_discrete(expand=c(0,0),labels= c("0","5","15","25","35","45","55","65","75","85")) +
+  scale_y_discrete(expand=c(0,0),breaks = c("200","400", "600"), labels = c("3%", "6%","9%"))+
   theme(legend.position = "right", 
         axis.text.x = element_text(family="DIN",size = 11 *0.8, angle = 30, colour = "gray30"),
         panel.grid.major.x= element_line(colour = "gray20",linetype =3 ),
